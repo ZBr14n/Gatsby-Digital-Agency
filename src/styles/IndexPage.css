@@ -1,0 +1,95 @@
+
+*,html{
+    background-origin: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 0; */
+}
+
+.sect-1{
+    background-image: url('/images/beach-background3.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+
+  @keyframes rotateCircle{
+    to {transform: rotate(360deg)}
+  }
+  
+.logo{
+    position: absolute;
+    right: 10%;
+    bottom: 80%;
+    animation: rotateCircle 30s infinite
+}
+.clouds{
+    z-index: 10;
+    position: absolute;
+    bottom: -10.5%;
+    left: -10%;
+    width: 100%;
+    height: auto;
+    /* max-width: 100%; */
+}
+/* section 2 */
+.sect-2-wrapper{
+    background-color: white;
+    /* position: absolute;
+    bottom: -90%; */
+}
+.sect-2{
+    background-image: url('/images/redbull-homepage-feature-updated4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90vw;
+    height: 100vh;
+    transition: transform 100ms linear;    
+}
+.sect-2:hover{
+  transform: perspective(100px) translateZ(-10px);
+}
+
+
+/* section 3 */
+.sect-3-wrapper{
+    background-color: white;
+}
+.sect-3{
+    background-image: url('/images/hellojetblue-homepage-feaure4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90vw;
+    height: 100vh;
+    transition: transform 100ms linear;    
+}
+.sect-3:hover{
+  transform: perspective(100px) translateZ(-10px);
+}
+
+
+/* section 4 */
+.sect-4-wrapper{
+    background-color: white;
+}
+.sect-4{
+    background-image: url('/images/infor-home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90vw;
+    height: 100vh;
+    transition: transform 100ms linear;    
+}
+.sect-4:hover{
+  transform: perspective(100px) translateZ(-10px);
+}
