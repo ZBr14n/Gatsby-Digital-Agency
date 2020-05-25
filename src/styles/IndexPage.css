@@ -3,10 +3,11 @@
     background-origin: border-box;
     margin: 0;
     padding: 0;
-    /* border: 0; */
+    /* border: 0; */    
 }
 
-.sect-1{
+
+.sect-1{    
     background-image: url('/images/beach-background3.jpg');
     background-position: top;
     background-repeat: no-repeat;
@@ -30,6 +31,53 @@
     bottom: 80%;
     animation: rotateCircle 30s infinite
 }
+
+.caption1{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  line-height: 2.68em;
+  
+  height: 500px;
+  /* border: 3px solid red; */
+}
+.header-wrapper{
+  font-size: 4rem;
+  font-weight: 500;
+}
+.header-wrapper > .phrase2{
+  font-weight: 900;
+}
+.caption2{
+  font-family: canada-type-gibson,Arial,sans-serif;
+  margin-left: 30%;
+  margin-top: 5%;
+  
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 1.78em;
+  width: 45%;
+  animation: revealPhrase 3s;
+}
+
+
+.header-wrapper > .phrase1{
+  animation: revealPhrase 1s;
+}
+.header-wrapper > .phrase2{  
+  animation: revealPhrase 2s;
+}
+@keyframes revealPhrase{
+  0%{opacity: 0;}
+  25%{opacity: .25;}
+  50%{opacity: .5;}
+  75%{opacity: .75;}
+  100%{opacity: 1;}
+}
+
+
 .clouds{
     z-index: 10;
     position: absolute;
@@ -41,16 +89,16 @@
 }
 /* section 2 */
 .sect-2-wrapper{
-    background-color: white;
-    /* position: absolute;
-    bottom: -90%; */
+    background-color: black;
+    /* position: relative;
+    bottom: 100px; */
 }
 .sect-2{
     background-image: url('/images/redbull-homepage-feature-updated4.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 90vw;
+    width: 97vw;
     height: 100vh;
     transition: transform 100ms linear;    
 }
@@ -61,14 +109,14 @@
 
 /* section 3 */
 .sect-3-wrapper{
-    background-color: white;
+    background-color: black;
 }
 .sect-3{
     background-image: url('/images/hellojetblue-homepage-feaure4.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 90vw;
+    width: 97vw;
     height: 100vh;
     transition: transform 100ms linear;    
 }
@@ -79,17 +127,126 @@
 
 /* section 4 */
 .sect-4-wrapper{
-    background-color: white;
+    /* background-color: black; */
 }
 .sect-4{
     background-image: url('/images/infor-home.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 90vw;
+    width: 97vw;
     height: 100vh;
     transition: transform 100ms linear;    
 }
 .sect-4:hover{
   transform: perspective(100px) translateZ(-10px);
+}
+
+
+
+
+/* professional fields section */
+.fields{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 25%;
+}
+.field-title{
+  font-size: 1.68em;
+}
+.u-list-field{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  width: 100%;
+  list-style: none;
+  padding-top: 10px;
+}
+.u-list-field > li {
+  padding: 20px;
+}
+.u-list-field > li > a{
+  text-decoration: none;
+  color: tomato;
+}
+.u-list-field > li > a::after{
+  display: block;
+    
+  content: "";
+  background: tomato;
+  width: 0;
+  height: 2px;
+  transition: width .3s;
+
+  /* padding: 50px; */
+  margin-right: 20px;
+  flex-basis: 5 0%;
+  
+}
+
+.u-list-field > li > a:hover::after{
+  width: 100%;
+}
+
+
+
+
+/* Who we are section */
+.who-we-are{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 50px;
+}
+.who-we-are > .phrase1{
+  font-size: 3em;
+}
+.who-we-are > .phrase2{
+  font-size: 1.2em;
+}
+.who-we-are > div{
+  
+  text-align: center;
+  padding: 30px;
+  font-weight: 900;
+  margin: 0 auto;
+  width: 50%;
+}
+
+/* about button */
+.about-sect::before{
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  opacity: .2;
+  
+  background-image: url('/images/tiles.png');
+  background-size: auto;
+  /* padding-bottom: 20%; */
+  /* min-height: 500px; */
+}
+.about-btn{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;  
+  width: 12.5%;
+  height: 60px;
+  border: 2px solid tomato;
+
+  transition: background-color .6s;
+
+}
+.about-btn:hover{
+  background-color: tomato;
+}
+
+
+.about-wrapper{
+  position: absolute;  
 }
