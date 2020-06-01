@@ -228,6 +228,12 @@
   /* padding-bottom: 20%; */
   /* min-height: 500px; */
 }
+
+
+
+
+
+/* about Button */
 .about-btn{
   
   display: flex;
@@ -239,14 +245,26 @@
   height: 60px;
   border: 2px solid tomato;
 
-  transition: background-color .6s;
+  z-index: 0;
+}
+.about-btn::before{
+  background-color:#ff675b;
+  bottom:0;
+  content:"";
+  left:0;
+  position:absolute;
+  top:0;
 
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .25s;
+  width:100%;
+  z-index:-1
 }
 .about-btn:hover{
-  background-color: tomato;
+  color:#fff;
+  border-color:#ff675b
 }
-
-
-.about-wrapper{
-  position: absolute;  
+.about-btn:hover::before{
+  transform: scaleX(1)
 }
